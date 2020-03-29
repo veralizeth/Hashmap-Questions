@@ -20,4 +20,8 @@ describe "permutations?" do
   it "returns false if the number of a specific letter are different" do
     expect(permutations?("pizza", "piza")).must_equal false
   end
+
+  it "returns false if the letter counts differ" do
+    expect(permutations?("pizza", "ppiza")).must_equal false
+  end
 end
